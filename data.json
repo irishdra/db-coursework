@@ -1,0 +1,218 @@
+{
+    "cheese": [
+        {
+            "id": "55ae488d-3481-4c8c-a2f4-b4140b6d7a17",
+            "type": "cheese",
+            "name": "shoulder",
+            "price": "878,38",
+            "currency": "uah"
+        },
+        {
+            "id": "736d0953-c8bd-4d41-a5ff-82a6b1e913c2",
+            "type": "cheese",
+            "name": "first",
+            "price": "704,81",
+            "currency": "uah"
+        },
+        {
+            "id": "c1958ede-9830-4334-90a4-152de35e5049",
+            "type": "cheese",
+            "name": "grow",
+            "price": "440,59",
+            "currency": "uah"
+        },
+        {
+            "id": "a65b8314-9279-4474-a685-2c4d3643b912",
+            "type": "cheese",
+            "name": "down",
+            "price": "990,96",
+            "currency": "uah"
+        },
+        {
+            "id": "2723140a-2894-484c-9a51-c0c431789cc4",
+            "type": "cheese",
+            "name": "never",
+            "price": "720,84",
+            "currency": "uah"
+        },
+        {
+            "id": "575a6527-9f71-4f01-b008-87fe8b24740a",
+            "type": "cheese",
+            "name": "eye",
+            "price": "90,50",
+            "currency": "uah"
+        },
+        {
+            "id": "0cf77f1b-7339-4da0-9952-1c42ed166096",
+            "type": "cheese",
+            "name": "sit",
+            "price": "629,66",
+            "currency": "uah"
+        },
+        {
+            "id": "3e0f9944-f0a6-46ed-ad29-de3dd9888622",
+            "type": "cheese",
+            "name": "government",
+            "price": "696,84",
+            "currency": "uah"
+        },
+        {
+            "id": "6e5ee28c-8d28-4c83-a708-f6a3c9953147",
+            "type": "cheese",
+            "name": "animal",
+            "price": "196,70",
+            "currency": "uah"
+        },
+        {
+            "id": "a7f2448b-c87a-4931-b9f4-ffeeac9ea93e",
+            "type": "cheese",
+            "name": "way",
+            "price": "768,58",
+            "currency": "uah"
+        }
+    ],
+    "milk": [
+        {
+            "id": "89bc5483-72d2-4080-8da6-8022759566f4",
+            "type": "milk",
+            "name": "business",
+            "price": "81,60",
+            "currency": "uah"
+        },
+        {
+            "id": "2ec96f17-b085-4510-a488-00bda03a49af",
+            "type": "milk",
+            "name": "tax",
+            "price": "88,33",
+            "currency": "uah"
+        },
+        {
+            "id": "a57c42a3-6f2f-4368-b7cd-8f55a58f8256",
+            "type": "milk",
+            "name": "against",
+            "price": "67,67",
+            "currency": "uah"
+        },
+        {
+            "id": "e01a6264-80aa-43d3-88bc-99483608f5e6",
+            "type": "milk",
+            "name": "statement",
+            "price": "18,71",
+            "currency": "uah"
+        },
+        {
+            "id": "a81f415d-5e8b-45bc-a627-76e175b16b61",
+            "type": "milk",
+            "name": "company",
+            "price": "92,94",
+            "currency": "uah"
+        },
+        {
+            "id": "bfae2ed2-6630-41dc-86eb-c7f2537dce94",
+            "type": "milk",
+            "name": "decision",
+            "price": "97,38",
+            "currency": "uah"
+        },
+        {
+            "id": "8b1d101a-4231-48da-9e06-6e9a70c74960",
+            "type": "milk",
+            "name": "player",
+            "price": "71,11",
+            "currency": "uah"
+        },
+        {
+            "id": "21d6aee2-ccc4-4123-a7c1-c214ee461e41",
+            "type": "milk",
+            "name": "the",
+            "price": "46,94",
+            "currency": "uah"
+        },
+        {
+            "id": "7a45f8eb-3377-4c88-9ead-95fa7a71d7c1",
+            "type": "milk",
+            "name": "walk",
+            "price": "59,37",
+            "currency": "uah"
+        },
+        {
+            "id": "46c8decc-3c45-4a43-a6df-f1ee0b9c3361",
+            "type": "milk",
+            "name": "provide",
+            "price": "84,63",
+            "currency": "uah"
+        }
+    ],
+    "bread": [
+        {
+            "id": "dca54e6d-5870-4858-bcb1-7c972c6f7c1d",
+            "type": "bread",
+            "name": "last",
+            "price": "451,50",
+            "currency": "uah"
+        },
+        {
+            "id": "692bbef7-d548-462a-887f-596f097ed5bd",
+            "type": "bread",
+            "name": "various",
+            "price": "25,81",
+            "currency": "uah"
+        },
+        {
+            "id": "91c8c401-340a-49f8-b94f-4e046c4c577f",
+            "type": "bread",
+            "name": "indicate",
+            "price": "449,96",
+            "currency": "uah"
+        },
+        {
+            "id": "8a1d4734-78f7-487c-8a37-fc4d27337921",
+            "type": "bread",
+            "name": "call",
+            "price": "222,12",
+            "currency": "uah"
+        },
+        {
+            "id": "d24ba7f3-f16b-4873-bda2-a82552f50e4b",
+            "type": "bread",
+            "name": "exist",
+            "price": "213,7",
+            "currency": "uah"
+        },
+        {
+            "id": "af26d5b7-2fa4-4393-bd78-0a56a0876897",
+            "type": "bread",
+            "name": "age",
+            "price": "130,20",
+            "currency": "uah"
+        },
+        {
+            "id": "c8ee9b24-9031-4864-885b-9800520b16a2",
+            "type": "bread",
+            "name": "cold",
+            "price": "314,4",
+            "currency": "uah"
+        },
+        {
+            "id": "11f90149-9ac6-4031-9f40-2ab7cb325771",
+            "type": "bread",
+            "name": "stock",
+            "price": "440,2",
+            "currency": "uah"
+        },
+        {
+            "id": "b562e671-2cea-4f66-9434-35b400a937e6",
+            "type": "bread",
+            "name": "job",
+            "price": "254,24",
+            "currency": "uah"
+        },
+        {
+            "id": "10fbc173-0d84-44bf-b36e-632b1894960d",
+            "type": "bread",
+            "name": "edge",
+            "price": "99,85",
+            "currency": "uah"
+        }
+    ]
+}
