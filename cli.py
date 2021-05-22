@@ -1,9 +1,17 @@
+from db.generator import generate_cheese, generate_milk, generate_bread
+from db.backup import backup, restore
+from db.repository import ProductsRepository
+
+PR = ProductsRepository()
+
 def start_menu() -> int:
     print("\nSTART MENU", 15 * "-", ">")
     print("0. Exit.")
-    print("1. Regression..")
-    print("2. Regression..")
-    print("3. ?\n")
+    print("1. Generate new data.")
+    print("2. Make backup.")
+    print("3. Drop DB.")
+    print("4. Make restore.")
+    print("5. Regression..\n")
     return int(input("Enter the number of action: "))
 
 def start():
@@ -15,15 +23,25 @@ def start():
             break
 
         elif action == 1:
+            generate_bread()
+            generate_milk()
+            generate_cheese()
+
+        elif action == 2:
+            backup()
+
+        elif action == 3:
+            PR.drop()
+
+        elif action == 4:
+            restore()
+
+        elif action == 5:
             #todo
             break
 
-        elif action == 2:
-            # todo
-            break
-
         else:
-            print("Choose only available [0-3] actions :)")
+            print("Choose only available [0-5] actions :)")
 
 if __name__ == '__main__':
     start()
