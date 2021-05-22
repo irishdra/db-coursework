@@ -10,10 +10,9 @@ def backup():
     data = PR.find()
 
     with open(filepath, 'w+') as file:
-        writer = csv.DictWriter(file, fieldnames=['type', 'name', 'price', 'currency'])
+        writer = csv.DictWriter(file, fieldnames=['_id', 'type', 'name', 'price', 'currency'])
         writer.writeheader()
         for product in data:
-            del product['_id']
             writer.writerow(product)
 
 def restore():
