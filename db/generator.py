@@ -7,16 +7,21 @@ PR = ProductsRepository()
 
 PRODUCTS_QUANTITY = 100
 products = {}
+breads = ('baguette', 'whole-grain')
+milks = ('baked', 'ordinary')
+cheeses = ('mozzarella', 'dorblu', 'camambert')
+market = ('ekomarket', 'silpo', 'atb', 'marketopt', 'metro')
 
-def generate_cheese():
-    type = 'cheese'
+def generate_bread():
+    type = 'bread'
     products[type] = []
     for i in range(PRODUCTS_QUANTITY):
         products[type].append({
             '_id': uuid.uuid4(),
             'type': type,
-            'name': faker.words(1)[0],
-            'price': f'{faker.random_int(30, 1000)},{faker.random_int(0, 99)}',
+            'name': breads[faker.random_int(0, 1)],
+            'market': market[faker.random_int(0, 4)],
+            'price': float(f'{faker.random_int(50, 100)}.{faker.random_int(0, 99)}'),
             'currency': 'uah'
         })
     write_data_to_db(type)
@@ -28,21 +33,23 @@ def generate_milk():
         products[type].append({
             '_id': uuid.uuid4(),
             'type': type,
-            'name': faker.words(1)[0],
-            'price': f'{faker.random_int(10, 100)},{faker.random_int(0, 99)}',
+            'name': milks[faker.random_int(0, 1)],
+            'market': market[faker.random_int(0, 4)],
+            'price': float(f'{faker.random_int(10, 100)}.{faker.random_int(0, 99)}'),
             'currency': 'uah'
         })
     write_data_to_db(type)
 
-def generate_bread():
-    type = 'bread'
+def generate_cheese():
+    type = 'cheese'
     products[type] = []
     for i in range(PRODUCTS_QUANTITY):
         products[type].append({
             '_id': uuid.uuid4(),
             'type': type,
-            'name': faker.words(1)[0],
-            'price': f'{faker.random_int(10, 500)},{faker.random_int(0, 99)}',
+            'name': cheeses[faker.random_int(0, 2)],
+            'market': market[faker.random_int(0, 4)],
+            'price': float(f'{faker.random_int(100, 500)}.{faker.random_int(0, 99)}'),
             'currency': 'uah'
         })
     write_data_to_db(type)
