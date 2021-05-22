@@ -17,3 +17,6 @@ class ProductsRepository:
 
     def delete_one(self, query):
         self.collection.delete_one(query)
+
+    def drop(self):
+        self.collection.drop()

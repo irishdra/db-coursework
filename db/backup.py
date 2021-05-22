@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 import csv
-from repository import ProductsRepository
+from db.repository import ProductsRepository
 
 load_dotenv()
 PR = ProductsRepository()
