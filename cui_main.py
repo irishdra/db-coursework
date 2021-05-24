@@ -1,9 +1,8 @@
 from db.generator import generate_cheese, generate_milk, generate_bread
 from db.backup import backup, restore
 from cui_statistics import statistics
-from db.repository import ProductsRepository
-
-PR = ProductsRepository()
+from db.repositories.products_repository import products_repository
+from db.repositories.old_prices_repository import old_prices_repository
 
 def start_menu() -> int:
     print("\nSTART MENU", 15 * "-", ">")
@@ -32,7 +31,8 @@ def start():
             backup()
 
         elif action == 3:
-            PR.drop()
+            products_repository.drop()
+            old_prices_repository.drop()
 
         elif action == 4:
             restore()

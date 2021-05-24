@@ -1,23 +1,30 @@
 from dotenv import load_dotenv
-import csv
-from db.repository import ProductsRepository
+import json
+from db.repositories.products_repository import products_repository
+from db.repositories.old_prices_repository import old_prices_repository
 
 load_dotenv()
-PR = ProductsRepository()
+
+filepath = 'db/backup.json'
 
 def backup():
-    filepath = 'db/backup.csv'
-    data = PR.find()
+    data = {
+        'products': products_repository.find(),
+        'old_prices': old_prices_repository.find()
+    }
 
     with open(filepath, 'w+') as file:
-        writer = csv.DictWriter(file, fieldnames=['_id', 'type', 'name', 'market', 'price', 'currency'])
-        writer.writeheader()
-        for product in data:
-            writer.writerow(product)
+        json.dump(data, file, ensure_ascii=False, indent=4)
 
 def restore():
-    filepath = 'db/backup.csv'
-    with open(filepath, 'r') as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            PR.insert_one(row)
+    try:
+        with open(filepath, 'r+') as file:
+            data = json.load(file)
+
+        products_repository.drop()
+        old_prices_repository.drop()
+
+        products_repository.insert_all(data['products'])
+        old_prices_repository.insert_all(data['old_prices'])
+    except:
+        print('Some problem with backup file :(')

@@ -1,18 +1,16 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from db.repository import ProductsRepository
-
-PR = ProductsRepository()
+from db.repositories.products_repository import products_repository
 
 folder_path = 'outputs/'
 markets = ['ekomarket', 'silpo', 'atb', 'marketopt', 'metro']
 
 def get_name_of_product(name):
-    product = PR.find_one({'name': name})
+    product = products_repository.find_one({'name': name})
     return f"{product['name']} {product['type']}"
 
 def get_prices_of_products(name, market):
-    products = PR.find({'name': name, 'market': market})
+    products = products_repository.find({'name': name, 'market': market})
     products_prices = []
     for product in products:
         products_prices.append(product['price'])
