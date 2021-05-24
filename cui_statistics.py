@@ -1,4 +1,4 @@
-from stat_helper import describe_products
+from stat_helper import describe_products, get_linear_regression
 
 def statistics_menu():
     print("\nSTATISTICS MENU", 15 * "-", ">")
@@ -6,7 +6,7 @@ def statistics_menu():
     print("1. Describe prices of bread.")
     print("2. Describe prices of milk.")
     print("3. Describe prices of cheese.")
-    print("4. Regression..\n")
+    print("4. Regression for price of products.\n")
     return int(input("Enter the number of action: "))
 
 def statistics():
@@ -34,8 +34,12 @@ def statistics():
             print("Don't forget to look at plots :)")
 
         elif action == 4:
-            #todo
-            print(4)
+            print('Enter what product you want to analyze:')
+            print(' - bread -> [baguette, whole-grain]')
+            print(' - milk -> [ordinary, baked]')
+            print(' - cheese -> [mozzarella, dorblu, camambert]')
+            # name = str(input)
+            get_linear_regression('mozzarella', 'silpo', '2100-07-23', True)
 
         else:
             print("Choose only available [0-4] actions :)")
