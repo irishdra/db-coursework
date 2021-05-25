@@ -50,7 +50,7 @@ def describe_products(product):
     max_market = markets[prices.index(max(prices))]
     print(f'Market {min_market} has the lowest prices on {name_of_product}. And {max_market} has the highest prices on {name_of_product}.')
 
-def get_linear_regression(name, market, date=0, isPredict=False):
+def get_linear_regression(name, market, date):
     products = products_repository.find({'name': name, 'market': market})
     old_prices = []
     dates = []
@@ -74,9 +74,11 @@ def get_linear_regression(name, market, date=0, isPredict=False):
     model = list(map(lin_regr, dates_to_number_values))
     #
 
-    if isPredict:
-        answer = lin_regr(datetime.toordinal(datetime.strptime(date, '%Y-%m-%d')))
-        print(f'Price on {date} will be {round(answer, 2)}.')
+    answer = lin_regr(datetime.toordinal(datetime.strptime(date, '%Y-%m-%d')))
+    if answer <= 0:
+        print()
+    else:
+        print(f'Price on {date} will be {round(answer, 2)} in UAH.')
 
     fig = plt.figure()
     plt.ylabel('Price, uah')

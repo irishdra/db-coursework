@@ -34,12 +34,16 @@ def statistics():
             print("Don't forget to look at plots :)")
 
         elif action == 4:
-            print('Enter what product you want to analyze:')
-            print(' - bread -> [baguette, whole-grain]')
-            print(' - milk -> [ordinary, baked]')
-            print(' - cheese -> [mozzarella, dorblu, camambert]')
-            # name = str(input)
-            get_linear_regression('mozzarella', 'silpo', '2100-07-23', True)
+            print('bread -> [baguette, whole-grain]')
+            print('milk -> [ordinary, baked]')
+            print('cheese -> [mozzarella, dorblu, camambert]')
+            product = input('Enter what product you want to analyze: ')
+            print('market -> [ekomarket, silpo, atb, marketopt, metro]')
+            market = input('Enter in what market you want to analyze: ')
+            date = input('Enter date for price prediction in format YYYY-MM-DD: ')
+            get_linear_regression(product, market, date)
+
+            print("Don't forget to look at plot :)")
 
         else:
             print("Choose only available [0-4] actions :)")

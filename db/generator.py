@@ -1,5 +1,4 @@
 from datetime import datetime
-from random import choice
 from faker import Faker
 import uuid
 from db.repositories.products_repository import products_repository
@@ -17,10 +16,8 @@ cheeses = ('mozzarella', 'dorblu', 'camambert')
 market = ('ekomarket', 'silpo', 'atb', 'marketopt', 'metro')
 
 def get_random_date():
-    days = list(range(1, 32))
-    months = list(range(1, 13))
-    year = list(range(2000, 2020))
-    return '{}-{:02d}-{:02d}'.format(choice(year), choice(months), choice(days))
+    date = faker.date_between_dates(date_start=datetime(2000, 1, 1), date_end=datetime(2020, 12, 31))
+    return str(date)
 
 def generate_old_prices(product_id):
     for i in range(OLD_PRICE_QUANTITY):
