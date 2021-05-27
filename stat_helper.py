@@ -76,7 +76,7 @@ def get_linear_regression(name, market, date):
 
     answer = lin_regr(datetime.toordinal(datetime.strptime(date, '%Y-%m-%d')))
     if answer <= 0:
-        print()
+        print(f'We have not very good data for {name} in {market}. Try smth else, sowy :3')
     else:
         print(f'Price on {date} will be {round(answer, 2)} in UAH.')
 
